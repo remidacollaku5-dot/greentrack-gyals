@@ -1,0 +1,17 @@
+{
+  "description": "Hourly electricity consumption record (Developer A -> B and C)",
+  "fields": {
+    "timestamp": "ISO 8601 string, e.g. 2026-01-01T10:00:00",
+    "global_active_power_kwh": "float, energy used in that hour in kWh",
+    "sub_metering_1_kwh": "float, kitchen",
+    "sub_metering_2_kwh": "float, laundry",
+    "sub_metering_3_kwh": "float, water heater and AC"
+  },
+  "example": {
+    "timestamp": "2026-01-01T10:00:00",
+    "global_active_power_kwh": 1.25,
+    "sub_metering_1_kwh": 0.1,
+    "sub_metering_2_kwh": 0.3,
+    "sub_metering_3_kwh": 0.6
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "description": "Assistant chat contract (Developer B + C) for POST /chat",
+  "request": {
+    "message": "string, the user's question",
+    "session_id": "string, identifies the conversation"
+  },
+  "response_fields": {
+    "answer": "string, the assistant's reply",
+    "citations": "list of strings, sources used (documents or SQL tables)",
+    "tools_used": "list of strings, e.g. run_sql_query"
+  },
+  "example_request": {
+    "message": "When was my peak consumption last week?",
+    "session_id": "abc123"
+  },
+  "example_response": {
+    "answer": "Your peak was on Tuesday at 19:00 with 3.2 kWh.",
+    "citations": ["gold_hourly_consumption"],
+    "tools_used": ["run_sql_query"]
+  }
+}

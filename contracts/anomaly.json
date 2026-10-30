@@ -1,0 +1,19 @@
+{
+  "description": "Anomaly detection result (Developer B -> C)",
+  "response_fields": {
+    "generated_at": "ISO 8601 string",
+    "anomalies": "list of {timestamp, consumption_kwh, anomaly_score, severity}",
+    "severity_values": "low, medium, high"
+  },
+  "example": {
+    "generated_at": "2026-01-01T10:00:00",
+    "anomalies": [
+      {
+        "timestamp": "2026-01-01T03:00:00",
+        "consumption_kwh": 4.8,
+        "anomaly_score": 0.92,
+        "severity": "high"
+      }
+    ]
+  }
+}
