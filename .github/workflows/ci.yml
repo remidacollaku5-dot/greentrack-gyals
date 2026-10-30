@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  basic-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check repository structure
+        run: |
+          test -d data
+          test -d ml
+          test -d app
+          test -d contracts
+          test -d fixtures
+          test -d infra
+          echo "Structure OK"
